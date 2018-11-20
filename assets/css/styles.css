@@ -24,19 +24,36 @@ a {
 header {
   position: absolute;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
+  margin-top: 30px;
 }
 
 header nav {
   display: flex;
   justify-content: center;
   width: 100%;
-  margin-top: 40px;
 }
 
 header nav li {
   padding: 0 25px;
+}
+
+hr {
+border: 0;
+width: 200px;
+margin-bottom: 8px;
+margin-top: 10px;
+height: 1px;
+background-image: -webkit-linear-gradient(left, #f0f0f0, #e0e0e0, #f0f0f0);
+background-image: -o-linear-gradient(left, #f0f0f0, #e0e0e0, #f0f0f0);
+background-image: linear-gradient(to right, #f0f0f0, #e0e0e0, #f0f0f0);
+}
+
+header h2 {
+  font-size: 14px;
+  font-weight: 300;
 }
 
 /* Hero Section  */

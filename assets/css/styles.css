@@ -34,6 +34,7 @@ header {
 header nav {
   display: flex;
   justify-content: center;
+  font-size: 14px;
 }
 
 header nav li {
@@ -52,7 +53,7 @@ background-image: linear-gradient(to right, #f0f0f0, #e0e0e0, #f0f0f0);
 }
 
 header h2 {
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 300;
   letter-spacing: .3px;
 }
@@ -95,25 +96,54 @@ header h2 {
   border: 4px solid #e0e0e0;
 }
 
-.about .love {
+.about .texts .thoughts {
   width: 70%;
   padding: 30px;
 }
 
-.about .love h1 {
+.about .texts .thoughts h1 {
   margin-bottom: 10px;
 }
 
-.about .love p {
+.about .texts .thoughts p {
   text-indent: 7%;
 }
 
 .about .img-scene1 {
   flex-basis: 30%;
   background-size: cover;
-  width: 400px;
+  width: 100%;
   height: 600px;
   margin-top: 100px;
+}
+
+@media (max-width: 1000px) {
+  .about .texts .quote {
+    padding: 20px;
+  }
+  .about .texts .thoughts {
+    padding: 30px 0 0 10px;
+  }
+}
+
+@media (max-width: 800px) {
+  .about .texts {
+    width: 70%;
+    margin: 100px auto;
+  }
+
+  .about .texts .quote {
+    width: 100%;
+  }
+
+  .about .texts .thoughts {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .about .img-scene1 {
+    display: none;
+  }
 }
 
 /* Grid Section  */
@@ -132,6 +162,13 @@ header h2 {
   /* height: 130px; */
 }
 
+@media (max-width: 800px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+    align-items: stretch;
+  }
+}
+
 /* Contact Me Section  */
 
 .contact {
@@ -146,12 +183,38 @@ header h2 {
   border-right: 1px solid black;
   text-align: left;
   font-size: 60px;
-  width: 40%;
+  width: 60%;
 }
 
 .contact h2 {
   border-bottom: 1px solid black;
   padding-bottom: 20px;
+}
+
+@media (max-width: 710px) {
+  .contact {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    margin: 100px 0;
+  }
+
+  .contact h1 {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 520px) {
+  .contact {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    margin: 100px 0;
+  }
+
+  .contact h1 {
+    margin-bottom: 20px;
+    text-align: left;
+  }
 }
 
 /* Footer Section  */
